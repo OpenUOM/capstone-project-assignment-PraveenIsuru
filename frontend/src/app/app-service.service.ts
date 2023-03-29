@@ -22,7 +22,7 @@ export class AppServiceService {
   }
 
   getTeacherData(){
-    return this.http.get('/api/listTeachers')
+    return this.http.get(`/api/listTeachers`)
   }
 
   getStudentData(){
@@ -34,20 +34,20 @@ export class AppServiceService {
   }
 
   getOneTeacherData(payload: Object){
-    return this.http.post('/api/getTeacherInfo', payload)
+    return this.http.post(`/api/getTeacherInfo`, payload)
   }
 
   addTeacher(payload: Object){
-    return this.http.post('/api/addTeacher', payload)
+    return this.http.post(`/api/addTeacher`, payload)
   }
 
-  deleteTeacher(payload: Object) {
-    return this.http.post('/api/deleteTeacher', payload)
+  deleteTeacher(payload: Object){
+    return this.http.post(`/api/deleteTeacher`, payload)
   }
 
   editTeacher(payload: Object){
-    return this.http.post('/api/editTeacher', payload)
-}
+    return this.http.post(`/api/editTeacher`, payload)
+  }
 
   editStudent(payload: Object){
     return this.http.post(`/${this.ROOT_URL}/editStudent`, payload)
