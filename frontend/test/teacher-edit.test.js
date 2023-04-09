@@ -16,7 +16,7 @@ test('Testing edit teachers', async t => {
     const table = Selector('#teacher-table')
     const rowCount = await table.find('tr').count;
 
-    let tdText = await table.find('tr').nth(rowCount - 1).innerText;
+    let tdText = await table.find('tr').nth(rowCount - 2).innerText;
     await t.expect(tdText).contains("Changed Teacher Name");
 
     await t.click("#teacher-delete-10003");
